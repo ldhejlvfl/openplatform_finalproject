@@ -290,8 +290,10 @@ def get_top_scorers():
         return f"取得得分榜資料時發生錯誤：{str(e)}"
 
 
+# on pc
+# if __name__ == "__main__":
+#     app.run(debug=True)
 
+# render
 if __name__ == "__main__":
-    app.run(debug=True)
-
-
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
